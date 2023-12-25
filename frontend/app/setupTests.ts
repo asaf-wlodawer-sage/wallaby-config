@@ -1,7 +1,8 @@
+// import "fake-indexeddb/auto";
+// import "vitest-dom/extend-expect";
+// import "./src/__mocks__/matchMedia";
+// import "./src/utils/__mocks__/user";
+
 // window.ResizeObserver = ResizeObserver;
 
-// Object.defineProperty(globalThis, "crypto", {
-//   value: {
-//     randomUUID: () => Math.random().toString(),
-//   },
-// });
+// process.env.TZ = "UTC";

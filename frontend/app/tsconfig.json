@@ -1,16 +1,28 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "lib": ["dom", "es2022"],
-    "outDir": "./dist",
-    "resolveJsonModule": true
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client", "vitest/globals", "node"]
   },
   "include": ["**/*.ts", "src/**/*", "*.d.ts"],
   "exclude": [
-    "jest.config.ts",
+    "vite.config.ts",
     "**/*.test.ts",
     "node_modules",
     "dist/**/*",
     "config/**/*"
-  ]
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

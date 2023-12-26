@@ -1,9 +1,10 @@
 {
   "name": "app",
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "yarn@4.0.2",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
@@ -33,7 +34,8 @@
     "vitest-dom": "^0.1.1"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "~18.2.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.22.5"
